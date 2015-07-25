@@ -335,7 +335,7 @@
 			root.button.innerText = root.options.buttonText;
 			root.elem.appendChild(root.button);
 		}
-		root.button.className = 'need-share-button_button';
+		root.button.className += ' need-share-button_button';
 
 		// show and hide dropdown
     root.button.addEventListener('click', function(event) {
