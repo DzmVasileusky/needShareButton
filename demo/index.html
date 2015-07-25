@@ -18,7 +18,7 @@
 			}
 
 			.wrapper {
-				padding: 300px 60px;
+				padding: 100px 60px;
 				text-align: center;
 			}
 		</style>
@@ -34,6 +34,8 @@
 			<div id="share-button-3" class="need-share-button-default" data-share-position="middleRight" data-share-networks="Mailto,Twitter,Pinterest,Facebook,GooglePlus,Linkedin"></div>
 			<h2>Share button box mode on middle right</h2>
 			<div id="share-button-4" class="need-share-button-default" data-share-position="middleRight" data-share-icon-style="box" data-share-networks="Mailto,Twitter,Pinterest,Facebook,GooglePlus,Linkedin"></div>
+			<h2>Share button with custom button</h2>
+			<div id="share-button-5" class="need-share-button-default" data-share-position="topCenter" data-share-share-button-class="custom-button"><span class="custom-button"><strong>Share it</strong></span></div>
 		</div>
 
 		<script src="../dist/needsharebutton.js"></script>
@@ -42,6 +44,7 @@
 			new needShareDropdown(document.getElementById('share-button-2'));
 			new needShareDropdown(document.getElementById('share-button-3'));
 			new needShareDropdown(document.getElementById('share-button-4'));
+			new needShareDropdown(document.getElementById('share-button-5'));
 		</script>
 	</body>
 </html>

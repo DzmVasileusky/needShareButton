@@ -286,6 +286,7 @@
 
 		// create default options
 		root.options = {
+			shareButtonClass: false, // child selector of custom share button
 			iconStyle: 'default', // default or box
 			boxForm: 'horizontal', // horizontal or vertical
 			position: 'bottomCenter', // top / middle / bottom + Left / Center / Right
@@ -322,14 +323,23 @@
 		/* Create layout
 		***********************************************/
 
-		// create dropdown button
-		root.button = document.createElement('span');
-		root.button.innerText = root.options.buttonText;
+		// create dropdown button if not exists
+		if (root.options.shareButtonClass) {
+			for (var i = 0; i < root.elem.children.length; i++) {
+				if (root.elem.children[i].className.match(root.options.shareButtonClass))
+					root.button = root.elem.children[i];
+			}
+		}
+		if (!root.button) {
+			root.button = document.createElement('span');
+			root.button.innerText = root.options.buttonText;
+			root.elem.appendChild(root.button);
+		}
 		root.button.className = 'need-share-button_button';
-		root.elem.appendChild(root.button);
 
 		// show and hide dropdown
-    root.button.addEventListener('click', function() {
+    root.button.addEventListener('click', function(event) {
+    	event.preventDefault();
     	if (!root.elem.className.match(/need-share-button-opened/)) {
     		root.elem.className += ' need-share-button-opened';
     	} else {

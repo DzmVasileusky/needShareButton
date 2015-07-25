@@ -61,9 +61,21 @@ new needShareDropdown(document.getElementById('share-button'), {
 });
 ```
 
+To use your own stylized button to trigger social share dropdown, you need to put custom element inside wrapper and set `shareButtonClass` option
+```html
+<div id="share-button" class="need-share-button-default" data-share-position="topCenter" data-share-share-button-class="custom-button"><span class="custom-button"><i class="share-icon"></i> Custom Share Button</span></div>
+```
+
 That's all. Please, enjoy to use.
 
 ###Options
+
+**shareButtonClass**
+Class of children element which should be used as dropdown trigger button
+```
+default: 'false'
+options: Any string
+```
 
 **iconStyle**
 View style
