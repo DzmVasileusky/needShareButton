@@ -88,7 +88,7 @@
         root.popup(url);
 	  	},
 	  	'facebook' : function() {
-	  		var url = root.options.protocol + 'www.facebook.com/share.php?';
+	  		var url = root.options.protocol + 'www.facebook.com/sharer/share.php?';
 	  		url += 'u=' + encodeURIComponent(root.options.url);
 	  		url += '&title=' + encodeURIComponent(root.options.title);
 
