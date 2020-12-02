@@ -1,4 +1,4 @@
-**Not supported, please do a fork if you need to add some special buttons or update sharing links**
+**NOT SUPPORTED, please do a fork if you need to add some special buttons or update sharing links**
 
 #needShareButton 1.0.0
 ##Do you need share button dropdown? Here you go!
