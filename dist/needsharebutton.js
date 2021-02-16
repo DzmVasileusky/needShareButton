@@ -1,9 +1,3 @@
-/*********************************************** 
-  needShareButton 
-  - Version 1.0.0
-  - Copyright 2015 Dzmitry Vasileuski
-	- Licensed under MIT (http://opensource.org/licenses/MIT)
-***********************************************/
 
 (function() {
 
@@ -89,7 +83,7 @@
 	  	},
 	  	'facebook' : function() {
 	  		var url = root.options.protocol + 'www.facebook.com/sharer/share.php?';
-	  		url += 'u=' + encodeURIComponent(root.options.url);
+	  		url += 'u=' + (root.options.url);
 	  		url += '&title=' + encodeURIComponent(root.options.title);
 
         root.popup(url);
